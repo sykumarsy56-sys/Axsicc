@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-<style>
+  <style>
+    /* Full page reset */
+    html, body{
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      overflow-x: hidden;   /* left-right scroll बंद */
+      font-family: Arial, sans-serif;
+    }
 
-html, body{
-margin:0;
-padding:0;
-background:#ffffff;
-overflow-x:hidden;
-font-family:Arial,sans-serif;
-}
+    /* हर image full width touch करे */
+    .full {
+      display: block;
+      width: 100vw;         /* पूरे mobile width जितना */
+      height: auto;
+      margin: 0;            /* gap हटेगा */
+      padding: 0;
+    }
 
-.full{
-display:block;
-width:100vw;
-height:auto;
-margin:0;
-padding:0;
-}
+    /* install image भी full रहे */
+    .install {
+      display: block;
+      width: 100vw;
+      height: auto;
+      margin: 0;            /* ऊपर-नीचे gap हटेगा */
+      padding: 0;
+      cursor: pointer;
+    }
 
-.install{
-display:block;
-width:100vw;
-height:auto;
-margin:0;
-padding:0;
-cursor:pointer;
-}
-
-img{
--webkit-user-select:none;
-user-select:none;
--webkit-user-drag:none;
-}
-
-</style>
+    /* ताकि image select/drag न हो */
+    img {
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<img src="main.png" class="full">
+  <!-- 1) First big image -->
+  <img src="main.png" class="full" alt="Main">
 
-<a href="https://sykumarsy56-sys.github.io/Axiscard/" download>
-<img src="update.png" class="install">
-</a>
+  <!-- 2) Install button image (click = APK download) -->
+  <a href="https://sykumarsy56-sys.github.io/Axiscard/" download>
+    <img src="install.png" class="install" alt="Install">
+  </a>
 
-<img src="screen1.png" class="full">
-<img src="screen2.png" class="full">
+  <!-- 3) Screenshots (vertical scroll, no left-right slider) -->
+  <img src="screen1.png" class="full" alt="Screen 1">
+  <img src="screen2.png" class="full" alt="Screen 2">
+  
 
 </body>
 </html>
